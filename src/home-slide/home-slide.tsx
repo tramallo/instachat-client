@@ -38,22 +38,17 @@ export default function HomeSlide() {
                 <div className='logo' >logo</div>
                 <div className='title'><h1>{chatService.getSocketId()}</h1></div>
             </div>
-            <div className='content'>
-                <div className='chat'>{chatContent}</div>
-                <div className='message-input'>
-                    <input 
-                        className='input-field'
-                        name='new-message'
-                        type='text'
-                        value={newMessage}
-                        placeholder='type a message'
-                        onChange={event => setNewMessage(event.target.value)}
-                    />
-                    <button className='send-button' onClick={sendMessage}>Send</button>
-                </div>
-            </div>
-            <div className='navbar'>
-                navbar content
+            <div className='chat'>{chatContent}</div>
+            <div className='message-input'>
+                <input 
+                    className='input-field'
+                    name='new-message'
+                    type='text'
+                    value={newMessage}
+                    placeholder='type a message...'
+                    onChange={event => setNewMessage(event.target.value)}
+                />
+                <button className='send-button' onClick={sendMessage}>Send</button>
             </div>
         </div>
     </>
